@@ -11,7 +11,12 @@ soon to be decommissioned, requiring maintenance or audit
 The underlying data model of an Asset is loosely structured into Facets, which contain structured data collections specific to some business function and drive integrations with external services.
 
 * Facets are defined dynamically via the API with a set of typed fields a friendly name, and a version.
-* Facets are identified and referenced by URNs including their names and versions.
+* Facets are identified and referenced by IRNs including their names and versions.
+
+## IRNs
+
+* `infra:asset:<Partition>:facet:<Name>/<Version>`
+* `infra:asset:<Partition>:resource:<ID>/<Facet>`
 
 ## API
 
@@ -19,10 +24,10 @@ The underlying data model of an Asset is loosely structured into Facets, which c
 
 ```json
 {
-  "urn": "URN",
+  "irn": "IRN",
   "facets": [
     {
-      "urn": "URN"
+      "irn": "IRN"
       "attributes": {
         "..."
       }
@@ -31,7 +36,7 @@ The underlying data model of an Asset is loosely structured into Facets, which c
 }
 ```
 
-* `POST /resource/URN/facet` - Add a facet to a resource
+* `POST /resource/IRN/facet` - Add a facet to a resource
 
 ```json
 {
