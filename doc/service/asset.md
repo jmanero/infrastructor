@@ -38,6 +38,8 @@ The underlying data model of an Asset is loosely structured into Facets, which c
 
 * `POST /resource/IRN/facet` - Add a facet to a resource
 
+_POST /resource/infra:asset:default:resource:r-000000/facet_
+
 ```json
 {
   "name": "String",

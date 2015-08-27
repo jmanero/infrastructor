@@ -10,8 +10,7 @@ _Track the geospatial position of everything in every dimension._ Allow resource
 
 ## IRNs
 
-* `infra:space:<Partition>:position:<DC>/<Cage>/<Rack>/<Elevation>`
-
+* `infra:space::position:<DC>/<Cage>/<Rack>/<Elevation>`
 
 ## API
 
@@ -29,6 +28,8 @@ _Track the geospatial position of everything in every dimension._ Allow resource
 
 * `POST /dc/IRN/cage` - Add a Cage to a DataCenter
 
+_POST /resource/infra:space::position:dc-000000/cage_
+
 ```json
 {
   "floor": "String",
@@ -38,6 +39,8 @@ _Track the geospatial position of everything in every dimension._ Allow resource
 ```
 
 * `POST /cage/IRN/rack` - Add a Rack to a Cage
+
+_POST /resource/infra:space::position:dc-000000/cage-000000/rack_
 
 ```json
 {
@@ -50,6 +53,8 @@ _Track the geospatial position of everything in every dimension._ Allow resource
 ```
 
 * `POST /rack/IRN/resource` - Add a Resource to a Rack
+
+_POST /resource/infra:space::position:dc-000000/cage-000000/rack-000000/resource_
 
 ```json
 {
