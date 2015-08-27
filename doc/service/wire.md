@@ -11,4 +11,46 @@ _Track the skinny bits that connect the boxes._ Represent a wire as an entity wi
 
 * `POST /wire` - Create a wire
 
+**Request**
+
+```json
+{
+  "identifier": "String",
+  "media": "String",
+  "ends": ["IRN<Space/Position>"]
+}
+```
+
+**Response**
+
+```json
+{
+  "irn": "IRN<Wire>",
+  "ends": [{
+    "irn": "IRN<Wire/End>",
+    "position": "IRN<Space/Position>"
+  }]
+}
+```
+
 * `PUT /wire/IRN/END` - Connect the end of a wire to a component's port
+
+_PUT /wire/infra:wire:default:wire:w-000000/e-000000_
+
+**Request**
+
+```json
+{
+  "port": "IRN<Box/Port>"
+}
+```
+
+**Response**
+
+```json
+{
+  "irn": "IRN<Wire/End>",
+  "port": "IRN<Box/Port>",
+  "position": "IRN<Space/Position>"
+}
+```

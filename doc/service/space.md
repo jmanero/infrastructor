@@ -21,8 +21,7 @@ _Track the geospatial position of everything in every dimension._ Allow resource
   "latitude": "Number",
   "longitude": "Number",
   "address": "String",
-  "building": "String",
-  "identity": "String"
+  "building": "String"
 }
 ```
 
@@ -33,8 +32,7 @@ _POST /resource/infra:space::position:dc-000000/cage_
 ```json
 {
   "floor": "String",
-  "hall": "String",
-  "identity": "String"
+  "hall": "String"
 }
 ```
 
@@ -46,7 +44,6 @@ _POST /resource/infra:space::position:dc-000000/cage-000000/rack_
 {
   "x": "String",
   "y": "String",
-  "identity": "String",
   "height": "Number",
   "depth": "Number"
 }
